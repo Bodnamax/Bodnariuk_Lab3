@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <h1 >
+            Legions Info
+        </h1>
+    </div>
+    <div class="range">
+        <input type="range" min="0" max="200000" value="200000" class="slider" id="myRange">
+        <p class="value_text">Value: <span id="value"></span></p>
+        <button onclick="loadPosts1()">Apply</button>
+    </div>
+    <button onclick="basketDisplay ()", class="Favorite">Chosen for war</button>
+    <div class="basket" id="basket-modal">
+        <div class="basket-content">
+            Chosen Ordens 
+            <div class="containerBasket" id="containerBasket">
+            </div>
+            <div id="seconds"></div>
+            <button id="close" onclick="closeModalBasket()">Close</button>
+            <div>
+                <canvas id="myChart"></canvas>
+              </div>
+        </div>
+        
+    </div>
+
+    <button onclick="loadAllPosts()">All ordens</button>
+    <button onclick="loadPosts('Traitors')">Traitors</button>
+    <button onclick="loadPosts('Loyalists')">Loyalists</button>
+    <div class="container" id="container">
+    </div>
+    <div id="modal-ad">
+        <div class="content">
+          <h2>Info</h2>
+          <p class="modaltext">Everything can change in any time...</p>
+          <button id="close-button">Understood</button>
+        </div>
+    </div>
+    <button onclick="scrollUp()" id="scroll-up-button">↑</button>
+    <script src="script.js"></script>
+</body>
+</html>
